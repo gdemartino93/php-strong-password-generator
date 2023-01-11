@@ -7,23 +7,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Password generator</title>
     <?php
-    $lunghezza = $_GET["length"] ?? 0;
+    include __DIR__ .'/helper.php';
     
-
-    // funzione per generare random password:
-    function generateRanPwd($length)
-    {
-    
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?$?%^&*()-+={[}]:;@#|<,>.?/';
-    $lunghezzaCharacters = strlen($characters);
-
-    for ($i = 0; $i < $length; $i++) {
-        $randomPwd .= $characters[rand(0, $lunghezzaCharacters - 1)];
-    }
-    return $randomPwd;
-}
-;
-    echo generateRanPwd($lunghezza);
     ?>
 </head>
 <body>
