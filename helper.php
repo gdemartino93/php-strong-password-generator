@@ -14,5 +14,5 @@
     return $randomPwd;
     };
     
-    echo generateRanPwd($lunghezza);
+     generateRanPwd($lunghezza);
     ?>
