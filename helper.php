@@ -3,7 +3,7 @@
     $filterLetter = $_GET["lettere"] ?? false;
     $filterNumber = $_GET["numeri"] ?? false;
     $filterSymbol = $_GET["simboli"] ?? false;
-    
+    var_dump($filterLetter);
 
     // funzione per generare random password:
     function generateRanPwd($length){
@@ -26,11 +26,15 @@
         $symbols .= $symbol;
     }
     $lunghezzaCharacters = strlen($characters);
-        
-       for ($i = 0; $i < $length; $i++) {
-        $randomPwd .= $allChars[rand(0, $lunghezzaCharacters - 1)];
+
+        if (($filterLetter == false) && ($filterNumber == false) && ($filterSymbol == false)) {
+            for ($i = 0; $i < $length; $i++) {
+                $randomPwd .= $allChars[rand(0, $lunghezzaCharacters - 1)];
+                }
+            return $randomPwd;
+
         }
-    return $randomPwd;
+
     };
     
      generateRanPwd($lunghezza);
