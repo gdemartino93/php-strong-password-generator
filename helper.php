@@ -1,17 +1,16 @@
 <?php
     $lunghezza = $_GET["length"] ?? 0;
-    $filterLetter = $_GET["lettere"] ?? false;
-    $filterNumber = $_GET["numeri"] ?? false;
-    $filterSymbol = $_GET["simboli"] ?? false;
-    var_dump($filterLetter);
-
+    $filterLetter = $_GET["lettere"] ? true : false;
+    $filterNumber = $_GET["numeri"] ? true : false;
+    $filterSymbol = $_GET["simboli"] ? true : false;
+ 
     // funzione per generare random password:
     function generateRanPwd($length){
 
     $allChars = array_merge(range('a', 'z'), range('A', 'Z'), range(0, 9), range('!', '/'), range(':', '@'), range('[', '`'), range('{', '~'));
     $lettersChars = array_merge(range('a', 'z'), range('A', 'Z'));
     $numbersChars = array_merge(range(0, 9));
-    $symbolsChars = array_merge( range('!', '/'), range(':', '@'), range('[', '`'), range('{', '~'));
+    $symbolsChars = array_merge( range('!', '/'));
     
     foreach ($allChars as $char){ 
         $characters .= $char;
@@ -33,13 +32,12 @@
                 }
             return $randomPwd;
 
-        }
-
-    };
+        };
+    }
+        
+ 
     
-     generateRanPwd($lunghezza);
+    
+
     ?>
 
-
-<!-- // prima condizione: (stampiamo tutti gli elementi se il filtro non è attivao) oppure seconda condizione( se il filtro è attivo deve esserci anche il valore settato su parking)
-            if ($vote >= $filterVote && (!$filterParking || ($filterParking && $parking))){ -->

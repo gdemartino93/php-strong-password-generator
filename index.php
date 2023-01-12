@@ -20,7 +20,7 @@
 <body>
 <main>
     <div class="container d-flex justify-content-center align-items-center">
-        <div class="col-3">
+        <div class="col-12">
             <form>
                 <div class="input-group mb-3 d-flex">
                     <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" name="length">
