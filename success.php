@@ -16,7 +16,7 @@
             <div class="col-12 text-center">
             <?php
                 session_start();
-                echo $_SESSION["passwordGenerata"];
+                echo "La tua password generata é: " . $_SESSION["passwordGenerata"];
             ?>
             </div>
         </div>

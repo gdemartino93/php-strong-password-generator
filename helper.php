@@ -4,8 +4,12 @@
 
     // funzione per generare random password:
     function generateRanPwd($length){
+
+    $allChars = array_merge(range('a', 'z'), range('A', 'Z'), range(0, 9), range('!', '/'), range(':', '@'), range('[', '`'), range('{', '~'));
     
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!?$?%^&*()-+={[}]:;@#|<,>.?/';
+    foreach ($allChars as $char){ 
+        $characters .= $char;
+    }
     $lunghezzaCharacters = strlen($characters);
 
        for ($i = 0; $i < $length; $i++) {
